@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>nCppComponentLists</class>
+ <widget class="QWidget" name="nCppComponentLists">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>C/C++ component lists</string>
+  </property>
+  <property name="toolTip">
+   <string>C/C++ component lists</string>
+  </property>
+  <property name="statusTip">
+   <string>C/C++ component lists</string>
+  </property>
+  <property name="whatsThis">
+   <string>C/C++ component lists</string>
+  </property>
+  <widget class="QComboBox" name="Source">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>320</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Sources</string>
+   </property>
+   <property name="statusTip">
+    <string>Sources</string>
+   </property>
+   <property name="whatsThis">
+    <string>Sources</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::NoInsert</enum>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Version">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>24</y>
+     <width>320</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Versions</string>
+   </property>
+   <property name="statusTip">
+    <string>Versions</string>
+   </property>
+   <property name="whatsThis">
+    <string>Versions</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::NoInsert</enum>
+   </property>
+  </widget>
+  <widget class="QTreeWidget" name="Items">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>48</y>
+     <width>320</width>
+     <height>432</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Items</string>
+   </property>
+   <property name="statusTip">
+    <string>Items</string>
+   </property>
+   <property name="whatsThis">
+    <string>Items</string>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="rootIsDecorated">
+    <bool>false</bool>
+   </property>
+   <attribute name="headerVisible">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Source</sender>
+   <signal>activated(int)</signal>
+   <receiver>nCppComponentLists</receiver>
+   <slot>SourceChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>11</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Version</sender>
+   <signal>activated(int)</signal>
+   <receiver>nCppComponentLists</receiver>
+   <slot>VersionChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

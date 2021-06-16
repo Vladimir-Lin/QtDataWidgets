@@ -1,0 +1,2004 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DatabaseConfigurator</class>
+ <widget class="QStackedWidget" name="DatabaseConfigurator">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>880</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Database configurator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../../Images/Branon.qrc">
+    <normaloff>:/images/SQL.png</normaloff>:/images/SQL.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>Database configurator</string>
+  </property>
+  <property name="statusTip">
+   <string>Database configurator</string>
+  </property>
+  <property name="whatsThis">
+   <string>Database configurator</string>
+  </property>
+  <widget class="QWidget" name="Selector">
+   <widget class="QToolButton" name="mysqlButton">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>160</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>MySQL</string>
+    </property>
+    <property name="icon">
+     <iconset theme="Rishon" resource="../../../Images/Branon.qrc">
+      <normaloff>:/images/mysql.png</normaloff>:/images/mysql.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>128</width>
+      <height>128</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="pqsqlButton">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>40</y>
+      <width>160</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PostgreSQL</string>
+    </property>
+    <property name="icon">
+     <iconset theme="Rishon" resource="../../../Images/Branon.qrc">
+      <normaloff>:/images/postgresql.png</normaloff>:/images/postgresql.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>128</width>
+      <height>128</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="firebirdButton">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>40</y>
+      <width>160</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Firebird</string>
+    </property>
+    <property name="icon">
+     <iconset theme="Rishon" resource="../../../Images/Branon.qrc">
+      <normaloff>:/images/firebird.png</normaloff>:/images/firebird.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>128</width>
+      <height>128</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="odbcButton">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>40</y>
+      <width>160</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ODBC</string>
+    </property>
+    <property name="icon">
+     <iconset theme="Rishon" resource="../../../Images/Branon.qrc">
+      <normaloff>:/images/odbc.png</normaloff>:/images/odbc.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>128</width>
+      <height>128</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="sqliteButton">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>40</y>
+      <width>160</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SQLite</string>
+    </property>
+    <property name="icon">
+     <iconset theme="Rishon" resource="../../../Images/Branon.qrc">
+      <normaloff>:/images/sqlite.png</normaloff>:/images/sqlite.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>128</width>
+      <height>128</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="MySQL">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Profile</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hostname</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Username</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Password</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Database</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Options</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="myProfileEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>20</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="myHostEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>60</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="myUserEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>100</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="myPassEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>140</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="mySchemeEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>180</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="myOptionEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>220</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="myIndexBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>260</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Indexing</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="myForeignBox">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>260</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Foreign key</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="myBackButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Change SQL</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="myApplyButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Apply</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="myTestButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Test</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="PostgreSQL">
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Profile</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hostname</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Username</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Password</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Database</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_25">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Options</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pqProfileEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>20</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pqHostEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>60</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pqUserEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>100</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pqPassEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>140</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pqSchemeEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>180</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pqOptionEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>220</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="pqIndexBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>260</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Indexing</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="pqForeignBox">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>260</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Foreign key</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pgBackButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Change SQL</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pqTestButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Test</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pqApplyButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Apply</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="Firebird">
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Profile</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Filename</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Username</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Password</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_26">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Options</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="fbProfileEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>20</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="fbFileEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>60</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="fbBrowseButton">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>60</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset theme="Rishon" resource="../../../Images/Branon.qrc">
+      <normaloff>:/images/directory.png</normaloff>:/images/directory.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="fbUserEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>100</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="fbPassEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>140</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="fbOptionEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>180</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="fbIndexBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>260</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Indexing</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="fbForeignBox">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>260</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Foreign key</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fbBackButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Change SQL</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fbTestButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Test</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fbApplyButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Apply</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="ODBC">
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Profile</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hostname</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Username</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Password</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Database</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_27">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Options</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ocProfileEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>20</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ocHostEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>60</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ocUserEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>100</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ocPassEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>140</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ocSchemeEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>180</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ocOptionEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>220</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ocIndexBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>260</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Indexing</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ocForeignBox">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>260</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Foreign key</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ocBackButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Change SQL</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ocTestButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Test</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ocApplyButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Apply</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="SQLite">
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Profile</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_24">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Filename</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Options</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="sqProfileEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>20</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="sqFileEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>60</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="sqBrowseButton">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>60</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset theme="Rishon" resource="../../../Images/Branon.qrc">
+      <normaloff>:/images/directory.png</normaloff>:/images/directory.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="sqOptionEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>100</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="sqIndexBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>260</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Indexing</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="sqForeignBox">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>260</y>
+      <width>160</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Foreign key</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sqBackButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Change SQL</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sqTestButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Test</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sqApplyButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>300</y>
+      <width>120</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Apply</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <connections>
+  <connection>
+   <sender>mysqlButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>MySQL()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pqsqlButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>PostgreSQL()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>firebirdButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>Firebird()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>439</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>odbcButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>ODBC()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>599</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sqliteButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>SQLite()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>759</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>myBackButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>Selector()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pgBackButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>Selector()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fbBackButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>Selector()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ocBackButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>Selector()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sqBackButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>Selector()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fbBrowseButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>BrowseFirebird()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>521</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sqBrowseButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>BrowseSQLite()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>511</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>myTestButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>TestMySQL()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pqTestButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>TestPostgreSQL()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fbTestButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>TestFirebird()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ocTestButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>TestODBC()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sqTestButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>TestSQLite()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>myApplyButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>ApplyMySQL()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>439</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pqApplyButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>ApplyPostgreSQL()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>439</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fbApplyButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>ApplyFirebird()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>439</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ocApplyButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>ApplyODBC()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>439</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sqApplyButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>ApplySQLite()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>439</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>myHostEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringMySQL(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>myUserEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringMySQL(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>myPassEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringMySQL(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mySchemeEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringMySQL(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>myOptionEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringMySQL(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>myProfileEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringMySQL(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pqHostEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringPostgreSQL(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pqUserEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringPostgreSQL(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pqPassEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringPostgreSQL(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pqSchemeEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringPostgreSQL(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pqOptionEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringPostgreSQL(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pqProfileEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringPostgreSQL(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fbFileEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringFirebird(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fbUserEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringFirebird(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fbPassEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringFirebird(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fbOptionEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringFirebird(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fbProfileEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringFirebird(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ocHostEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringODBC(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ocUserEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringODBC(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ocPassEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringODBC(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ocSchemeEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringODBC(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ocOptionEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringODBC(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ocProfileEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringODBC(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sqFileEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringSQLite(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sqOptionEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringSQLite(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sqProfileEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DatabaseConfigurator</receiver>
+   <slot>StringSQLite(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

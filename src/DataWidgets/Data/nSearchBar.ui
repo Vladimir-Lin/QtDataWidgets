@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>nSearchBar</class>
+ <widget class="QToolBar" name="nSearchBar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>34</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Search</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/images/documentsearch.png</normaloff>:/images/documentsearch.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>Search</string>
+  </property>
+  <property name="statusTip">
+   <string>Search</string>
+  </property>
+  <property name="whatsThis">
+   <string>Search</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>24</width>
+    <height>24</height>
+   </size>
+  </property>
+  <action name="Menu">
+   <property name="icon">
+    <iconset theme="Sakra">
+     <normaloff>:/images/menu.png</normaloff>:/images/menu.png</iconset>
+   </property>
+   <property name="text">
+    <string>Menu</string>
+   </property>
+   <property name="toolTip">
+    <string>Menu</string>
+   </property>
+   <property name="statusTip">
+    <string>Menu</string>
+   </property>
+   <property name="whatsThis">
+    <string>Menu</string>
+   </property>
+  </action>
+  <addaction name="Menu"/>
+ </widget>
+ <resources>
+  <include location="../../Images/Branon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>Menu</sender>
+   <signal>triggered()</signal>
+   <receiver>nSearchBar</receiver>
+   <slot>popupMenu()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>16</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

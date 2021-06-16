@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PadBrowser</class>
+ <widget class="QSplitter" name="PadBrowser">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Pad Browser</string>
+  </property>
+  <property name="orientation">
+   <enum>Qt::Vertical</enum>
+  </property>
+  <property name="handleWidth">
+   <number>1</number>
+  </property>
+  <widget class="QStackedWidget" name="Label">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>28</height>
+    </size>
+   </property>
+   <widget class="QSplitter" name="Head">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="handleWidth">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="Dock" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>140</width>
+       <height>28</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>140</width>
+       <height>28</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <widget class="QToolButton" name="Back">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>70</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../Images/Branon.qrc">
+        <normaloff>:/images/moveLeft.png</normaloff>:/images/moveLeft.png</iconset>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="Menu">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>0</y>
+        <width>70</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Menu</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../Images/Branon.qrc">
+        <normaloff>:/images/menu.png</normaloff>:/images/menu.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="Message">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="Line"/>
+  </widget>
+  <widget class="QToolBar" name="Tools">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>8</pointsize>
+     <italic>true</italic>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>20</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+  </widget>
+  <widget class="QStackedWidget" name="Edit">
+   <widget class="QTreeWidget" name="Files">
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="rootIsDecorated">
+     <bool>false</bool>
+    </property>
+    <property name="columnCount">
+     <number>4</number>
+    </property>
+    <column>
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string notr="true">2</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string notr="true">3</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string notr="true">4</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QWidget" name="Rename">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <widget class="QLineEdit" name="OldName">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>300</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Old name</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="NewName">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>300</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>New name</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../Images/Branon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>Menu</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Tools</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>52</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

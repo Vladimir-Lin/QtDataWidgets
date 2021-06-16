@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>com.neutrino.datawidgets</namespace>
+    <virtualFolder>DataWidgets</virtualFolder>
+    <customFilter name="CIOS Data Widgets 1.6.0">
+        <filterAttribute>CIOS Data Widgets</filterAttribute>
+        <filterAttribute>1.6.0</filterAttribute>
+    </customFilter>
+    <filterSection>
+        <filterAttribute>CIOS Data Widgets</filterAttribute>
+        <filterAttribute>1.6.0</filterAttribute>
+        <toc>
+            <section title="CIOS Data Widgets Manual" ref="index.html">
+                <section title="English" ref="en/index.html"/>
+                <section title="Traditional Chinese" ref="tw/index.html"/>
+                <section title="Simplified Chinese" ref="cn/index.html"/>
+            </section>
+        </toc>
+        <keywords>
+            <keyword name="Data Widgets" id="CIOS::DataWidgets" ref="index.html"/>
+        </keywords>
+        <files>
+            <file>*.css</file>
+            <file>*.html</file>
+            <file>images/*</file>
+            <file>tw/*</file>
+            <file>en/*</file>
+            <file>cn/*</file>
+        </files>
+    </filterSection>
+</QtHelpProject>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PadEditor</class>
+ <widget class="QSplitter" name="PadEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Pad Editor</string>
+  </property>
+  <property name="orientation">
+   <enum>Qt::Vertical</enum>
+  </property>
+  <property name="handleWidth">
+   <number>1</number>
+  </property>
+  <widget class="QStackedWidget" name="Label">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QSplitter" name="Head">
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="handleWidth">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="Pull" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>144</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>120</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:rgb(255,255,255);</string>
+     </property>
+     <widget class="QToolButton" name="Back">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>72</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>8</pointsize>
+        <italic>false</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/images/moveLeft.png</normaloff>:/images/moveLeft.png</iconset>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="Items">
+      <property name="geometry">
+       <rect>
+        <x>72</x>
+        <y>0</y>
+        <width>72</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>8</pointsize>
+        <italic>false</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Menu</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/images/menu.png</normaloff>:/images/menu.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="Message">
+     <property name="styleSheet">
+      <string notr="true">background:rgb(255,255,255);</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="Name">
+    <property name="placeholderText">
+     <string>Filename</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Loading">
+    <property name="placeholderText">
+     <string>Filename</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Find">
+    <property name="placeholderText">
+     <string>Search</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStackedWidget" name="Menu">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>48</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>48</height>
+    </size>
+   </property>
+   <widget class="QToolBar" name="Tools">
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>8</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStackedWidget" name="Editing">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <widget class="QTextEdit" name="Note"/>
+   <widget class="QWidget" name="Replace">
+    <widget class="QLineEdit" name="Keyword">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>300</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Keyword</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Replacement">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>300</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Replacement</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../Images/Branon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>Items</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Menu</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>52</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

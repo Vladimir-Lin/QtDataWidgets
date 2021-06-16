@@ -1,0 +1,5 @@
+SYNCQT.HEADER_FILES = ../../include/DataWidgets/datawidgets.h
+SYNCQT.HEADER_CLASSES = ../../include/DataWidgets/DataWidgets
+SYNCQT.PRIVATE_HEADER_FILES =
+SYNCQT.QPA_HEADER_FILES = 
+SYNCQT.INJECTIONS = 

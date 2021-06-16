@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>nSqlEditor</class>
+ <widget class="QTabWidget" name="nSqlEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Database plan editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../Images/Branon.qrc">
+    <normaloff>:/images/odbc.png</normaloff>:/images/odbc.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>Database plan editor</string>
+  </property>
+  <property name="statusTip">
+   <string>Database plan editor</string>
+  </property>
+  <property name="whatsThis">
+   <string>Database plan editor</string>
+  </property>
+  <property name="tabPosition">
+   <enum>QTabWidget::South</enum>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <property name="currentIndex">
+   <number>0</number>
+  </property>
+  <widget class="QSplitter" name="Tables">
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <attribute name="title">
+    <string>Tables</string>
+   </attribute>
+   <widget class="QSplitter" name="Creations">
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="Columns">
+   <property name="columnCount" stdset="0">
+    <number>8</number>
+   </property>
+   <attribute name="title">
+    <string>Columns</string>
+   </attribute>
+  </widget>
+  <widget class="QWidget" name="Constraints">
+   <attribute name="title">
+    <string>Constraints</string>
+   </attribute>
+  </widget>
+  <widget class="QWidget" name="Database">
+   <attribute name="title">
+    <string>Database</string>
+   </attribute>
+   <widget class="QComboBox" name="Schemes">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>634</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QTreeWidget" name="Schema">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>24</y>
+      <width>634</width>
+      <height>428</height>
+     </rect>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="rootIsDecorated">
+     <bool>false</bool>
+    </property>
+    <column>
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QToolBar" name="Tools">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>480</y>
+      <width>96</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+    <addaction name="actionCreations"/>
+    <addaction name="actionAdd"/>
+   </widget>
+  </widget>
+  <action name="actionAdd">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="Sakra" resource="../../Images/Branon.qrc">
+     <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+   <property name="toolTip">
+    <string>Add table</string>
+   </property>
+   <property name="statusTip">
+    <string>Add table</string>
+   </property>
+   <property name="whatsThis">
+    <string>Add table</string>
+   </property>
+  </action>
+  <action name="actionCreations">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="Sakra" resource="../../Images/Branon.qrc">
+     <normaloff>:/images/update.png</normaloff>:/images/update.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sync</string>
+   </property>
+   <property name="toolTip">
+    <string>SQL creation synchronization</string>
+   </property>
+   <property name="statusTip">
+    <string>SQL creation synchronization</string>
+   </property>
+   <property name="whatsThis">
+    <string>SQL creation synchronization</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../../Images/Branon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>Schemes</sender>
+   <signal>activated(int)</signal>
+   <receiver>nSqlEditor</receiver>
+   <slot>SourceChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>318</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCreations</sender>
+   <signal>activated()</signal>
+   <receiver>nSqlEditor</receiver>
+   <slot>Creations()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

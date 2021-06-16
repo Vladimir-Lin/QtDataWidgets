@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>nScriptEditor</class>
+ <widget class="QWidget" name="nScriptEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Script editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/images/standalone.png</normaloff>:/images/standalone.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>Script editor</string>
+  </property>
+  <property name="statusTip">
+   <string>Script editor</string>
+  </property>
+  <property name="whatsThis">
+   <string>Script editor</string>
+  </property>
+  <widget class="QToolButton" name="New">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>New script</string>
+   </property>
+   <property name="statusTip">
+    <string>New script</string>
+   </property>
+   <property name="whatsThis">
+    <string>New script</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/blank.png</normaloff>:/images/blank.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>28</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Save">
+   <property name="geometry">
+    <rect>
+     <x>28</x>
+     <y>0</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Save</string>
+   </property>
+   <property name="statusTip">
+    <string>Save</string>
+   </property>
+   <property name="whatsThis">
+    <string>Save</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/sqltable.png</normaloff>:/images/sqltable.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>28</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="List">
+   <property name="geometry">
+    <rect>
+     <x>84</x>
+     <y>0</y>
+     <width>716</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Script lists</string>
+   </property>
+   <property name="statusTip">
+    <string>Script lists</string>
+   </property>
+   <property name="whatsThis">
+    <string>Script lists</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::NoInsert</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Paraments">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>28</y>
+     <width>640</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Paraments</string>
+   </property>
+   <property name="statusTip">
+    <string>Paraments</string>
+   </property>
+   <property name="whatsThis">
+    <string>Paraments</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="Script">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>52</y>
+     <width>800</width>
+     <height>548</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Script</string>
+   </property>
+   <property name="statusTip">
+    <string>Script</string>
+   </property>
+   <property name="whatsThis">
+    <string>Script</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Evaluate">
+   <property name="geometry">
+    <rect>
+     <x>56</x>
+     <y>0</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Evaluate</string>
+   </property>
+   <property name="statusTip">
+    <string>Evaluate</string>
+   </property>
+   <property name="whatsThis">
+    <string>Evaluate</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/images/running.png</normaloff>:/images/running.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>28</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Type">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>28</y>
+     <width>160</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Script types</string>
+   </property>
+   <property name="statusTip">
+    <string>Script types</string>
+   </property>
+   <property name="whatsThis">
+    <string>Script types</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::NoInsert</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../../Images/Branon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>List</sender>
+   <signal>activated(int)</signal>
+   <receiver>nScriptEditor</receiver>
+   <slot>ScriptIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>441</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>New</sender>
+   <signal>clicked()</signal>
+   <receiver>nScriptEditor</receiver>
+   <slot>New()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>13</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Save</sender>
+   <signal>clicked()</signal>
+   <receiver>nScriptEditor</receiver>
+   <slot>Save()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Evaluate</sender>
+   <signal>clicked()</signal>
+   <receiver>nScriptEditor</receiver>
+   <slot>Evaluate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
